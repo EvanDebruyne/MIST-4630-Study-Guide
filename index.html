@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIST 4630 Final Exam Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .topic-card {
+            transition: all 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-toggle:checked + .accordion-label + .accordion-content {
+            max-height: 1000px;
+        }
+        .highlight {
+            background-color: #FEF3C7;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-4">MIST 4630 Final Exam Study Guide</h1>
+            <p class="text-xl text-gray-600">Comprehensive review of all topics covered after the Cloud Foundations exam</p>
+            <div class="mt-6">
+                <span class="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">Dynamic Web Applications</span>
+                <span class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium ml-2">Cloud Computing</span>
+                <span class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium ml-2">MVC Pattern</span>
+                <span class="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium ml-2">Containerization</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <!-- Quick Navigation Cards -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-globe text-indigo-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">1. General Concepts</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Overview of dynamic web applications and MVC design pattern.</p>
+                    <a href="#general" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">2. HTML/CSS</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Separation of concerns, basic HTML commands, and CSS fundamentals.</p>
+                    <a href="#htmlcss" class="text-blue-600 font-medium hover:text-blue-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-cloud text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">3. Cloud Computing</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">AWS services including S3, EC2, Elastic Beanstalk, and RDS.</p>
+                    <a href="#cloud" class="text-green-600 font-medium hover:text-green-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fab fa-java text-purple-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">4. JSP & 5. Servlets</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Java Server Pages and Servlet fundamentals.</p>
+                    <a href="#jsp" class="text-purple-600 font-medium hover:text-purple-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-project-diagram text-red-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">6. MVC Design Pattern</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Model-View-Controller architecture and security aspects.</p>
+                    <a href="#mvc" class="text-red-600 font-medium hover:text-red-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-database text-yellow-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">7. Database Connectivity</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">JDBC, state management, and database security.</p>
+                    <a href="#database" class="text-yellow-600 font-medium hover:text-yellow-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-server text-pink-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">8. Deployment</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Deploying full-stack Java MVC applications to the cloud.</p>
+                    <a href="#deployment" class="text-pink-600 font-medium hover:text-pink-800 transition">Jump to section →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden topic-card">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-teal-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-boxes text-teal-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">9. Containerization</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Docker, Kubernetes, and AWS container services.</p>
+                    <a href="#containerization" class="text-teal-600 font-medium hover:text-teal-800 transition">Jump to section →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="general">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
+                <i class="fas fa-globe mr-3"></i> 1. General Concepts
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">A. Overview of Dynamic Web Application Components</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">Client-Side:</span> HTML, CSS, JavaScript - handles presentation and user interaction</li>
+                    <li><span class="font-medium">Server-Side:</span> Java (Servlets/JSP), databases - handles business logic and data processing</li>
+                    <li><span class="font-medium">Communication:</span> HTTP/HTTPS protocols between client and server</li>
+                    <li><span class="font-medium">Database:</span> Persistent storage for application data (MySQL, PostgreSQL, etc.)</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">B. MVC Design Pattern</h3>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                        <div class="w-full md:w-1/3 p-4 bg-indigo-100 rounded-lg text-center mb-4 md:mb-0">
+                            <h4 class="font-bold text-indigo-800">Model</h4>
+                            <p class="text-sm">Business logic and data</p>
+                        </div>
+                        <div class="w-full md:w-1/3 p-4 bg-blue-100 rounded-lg text-center mb-4 md:mb-0">
+                            <h4 class="font-bold text-blue-800">View</h4>
+                            <p class="text-sm">Presentation layer (JSP)</p>
+                        </div>
+                        <div class="w-full md:w-1/3 p-4 bg-green-100 rounded-lg text-center">
+                            <h4 class="font-bold text-green-800">Controller</h4>
+                            <p class="text-sm">Handles user input (Servlet)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700"><span class="font-medium">Separation of concerns:</span> Divides application into three interconnected components to separate internal representations from how information is presented</p>
+                    <p class="text-gray-700 mt-2"><span class="font-medium">Java component responsibilities:</span></p>
+                    <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-700">
+                        <li><span class="font-medium">Model:</span> Java classes that represent data and business logic</li>
+                        <li><span class="font-medium">View:</span> JSP files that handle presentation</li>
+                        <li><span class="font-medium">Controller:</span> Servlets that manage application flow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="htmlcss">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                <i class="fas fa-code mr-3"></i> 2. HTML/CSS
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">A. Separation of Concerns</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">Definition:</span> Principle of separating a computer program into distinct sections, each addressing a separate concern</li>
+                    <li><span class="font-medium">Importance:</span> Improves maintainability, scalability, and collaboration among developers</li>
+                    <li><span class="font-medium">Web technologies:</span>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li><span class="font-medium">Structure:</span> HTML</li>
+                            <li><span class="font-medium">Presentation:</span> CSS</li>
+                            <li><span class="font-medium">Behavior:</span> JavaScript</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">B. Basic HTML Commands</h3>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <h4 class="font-medium text-gray-800 mb-2">Basic Page Structure:</h4>
+                    <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;Paragraph text&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-800 mb-2">Common Tags:</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><span class="font-medium">Links:</span> <code class="bg-gray-200 px-1 rounded">&lt;a href="url"&gt;text&lt;/a&gt;</code></li>
+                            <li><span class="font-medium">Images:</span> <code class="bg-gray-200 px-1 rounded">&lt;img src="image.jpg" alt="description"&gt;</code></li>
+                            <li><span class="font-medium">Forms:</span> <code class="bg-gray-200 px-1 rounded">&lt;form action="url" method="post"&gt;</code></li>
+                            <li><span class="font-medium">Tables:</span> <code class="bg-gray-200 px-1 rounded">&lt;table&gt;&lt;tr&gt;&lt;td&gt;cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-800 mb-2">Form Elements:</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><span class="font-medium">Text input:</span> <code class="bg-gray-200 px-1 rounded">&lt;input type="text" name="field"&gt;</code></li>
+                            <li><span class="font-medium">Password:</span> <code class="bg-gray-200 px-1 rounded">&lt;input type="password" name="pass"&gt;</code></li>
+                            <li><span class="font-medium">Submit button:</span> <code class="bg-gray-200 px-1 rounded">&lt;input type="submit" value="Submit"&gt;</code></li>
+                            <li><span class="font-medium">Radio buttons:</span> <code class="bg-gray-200 px-1 rounded">&lt;input type="radio" name="group" value="1"&gt;</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">C. CSS Basics</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-800 mb-2">Selectors:</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><span class="font-medium">Element:</span> <code class="bg-gray-200 px-1 rounded">p { color: blue; }</code></li>
+                            <li><span class="font-medium">Class:</span> <code class="bg-gray-200 px-1 rounded">.className { font-weight: bold; }</code></li>
+                            <li><span class="font-medium">ID:</span> <code class="bg-gray-200 px-1 rounded">#idName { margin: 10px; }</code></li>
+                            <li><span class="font-medium">Attribute:</span> <code class="bg-gray-200 px-1 rounded">input[type="text"] { width: 200px; }</code></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-800 mb-2">The Cascade:</h4>
+                        <p class="text-gray-700 mb-2">CSS can be placed in:</p>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>External stylesheet (recommended)</li>
+                            <li>Internal style block in <code class="bg-gray-200 px-1 rounded">&lt;head&gt;</code></li>
+                            <li>Inline styles (least recommended)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-2">CSS Box Model:</h4>
+                    <div class="flex justify-center mb-4">
+                        <div class="border-2 border-gray-300 p-6 relative" style="width: 200px; height: 100px;">
+                            <div class="absolute inset-0 border-2 border-blue-300 m-2"></div>
+                            <div class="absolute inset-0 bg-blue-100 opacity-50 m-4"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">Content</div>
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 text-xs">Margin</div>
+                            <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 text-xs">Border</div>
+                            <div class="absolute top-1 left-1/2 transform -translate-x-1/2 text-xs">Padding</div>
+                        </div>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                        <li><span class="font-medium">Content:</span> The actual content of the box</li>
+                        <li><span class="font-medium">Padding:</span> Clears an area around the content</li>
+                        <li><span class="font-medium">Border:</span> Goes around the padding and content</li>
+                        <li><span class="font-medium">Margin:</span> Clears an area outside the border</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="cloud">
+            <h2 class="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                <i class="fas fa-cloud mr-3"></i> 3. Cloud Computing
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">A. Differences Between IaaS and PaaS</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">Feature</th>
+                                <th class="py-2 px-4 border-b text-left">IaaS (Infrastructure as a Service)</th>
+                                <th class="py-2 px-4 border-b text-left">PaaS (Platform as a Service)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Control Level</td>
+                                <td class="py-2 px-4 border-b">High - manage servers, storage, networking</td>
+                                <td class="py-2 px-4 border-b">Medium - focus on application development</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Management Responsibility</td>
+                                <td class="py-2 px-4 border-b">OS, middleware, runtime, data, applications</td>
+                                <td class="py-2 px-4 border-b">Only data and applications</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Scalability</td>
+                                <td class="py-2 px-4 border-b">Manual scaling required</td>
+                                <td class="py-2 px-4 border-b">Automatic scaling typically included</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Example</td>
+                                <td class="py-2 px-4 border-b">AWS EC2</td>
+                                <td class="py-2 px-4 border-b">AWS Elastic Beanstalk</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">B. AWS S3</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">Simple Storage Service (S3):</span> Object storage service offering scalability, data availability, security, and performance</li>
+                    <li><span class="font-medium">Use for Web Applications:</span>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li>Host static websites (HTML, CSS, JavaScript, images)</li>
+                            <li>Store and retrieve any amount of data at any time</li>
+                            <li>Backup and archive critical data</li>
+                            <li>Store assets like images, videos for web applications</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-medium">Key Features:</span> 99.999999999% durability, versioning, lifecycle policies, encryption</li>
+                </ul>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">C. AWS EC2</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">Elastic Compute Cloud (EC2):</span> Provides scalable computing capacity in the cloud</li>
+                    <li><span class="font-medium">Deployment of Dynamic Applications:</span>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li>Launch virtual servers (instances) with various OS options</li>
+                            <li>Choose instance types based on CPU, memory, storage needs</li>
+                            <li>Configure security groups to control traffic</li>
+                            <li>Install required software (Java, Tomcat, MySQL, etc.)</li>
+                            <li>Deploy application code to the instance</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-medium">Key Features:</span> Auto Scaling, Elastic Load Balancing, multiple instance types</li>
+                </ul>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">D. AWS Elastic Beanstalk</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">What it is:</span> PaaS that makes it easy to deploy and scale web applications</li>
+                    <li><span class="font-medium">Difference from EC2:</span>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li>EB handles deployment details automatically (capacity provisioning, load balancing, scaling)</li>
+                            <li>EB manages the infrastructure while you focus on code</li>
+                            <li>EB supports multiple platforms (Java, .NET, Node.js, etc.)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-medium">Key Terms:</span> Application, Environment, Application Version, Environment Tier</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">E. AWS RDS</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">Relational Database Service (RDS):</span> Managed relational database service</li>
+                    <li><span class="font-medium">Use as Data Server:</span>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li>Hosts the database in the cloud separate from application servers</li>
+                            <li>Supports multiple database engines (MySQL, PostgreSQL, Oracle, etc.)</li>
+                            <li>Automates administrative tasks (backups, patching, failure detection)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-medium">Benefits:</span> Scalable, highly available, durable, secure</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="jsp">
+            <h2 class="text-2xl font-bold text-purple-800 mb-6 flex items-center">
+                <i class="fab fa-java mr-3"></i> 4. JSP & 5. Servlets
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">4. JSP (JavaServer Pages)</h3>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">A. Creating an Eclipse Dynamic Web Project</h4>
+                    <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+                        <li>File → New → Dynamic Web Project</li>
+                        <li>Enter project name and target runtime (e.g., Apache Tomcat)</li>
+                        <li>Configure build settings (source folders, output folder)</li>
+                        <li>Check "Generate web.xml deployment descriptor"</li>
+                        <li>Finish to create project structure with WEB-INF folder</li>
+                    </ol>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">B. Including Java in JSPs</h4>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h5 class="font-medium text-gray-800 mb-2">Page Directive:</h5>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;%@ page import="java.util.Date" %&gt;
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;</pre>
+                        
+                        <h5 class="font-medium text-gray-800 mt-4 mb-2">Scriptlet (Java statements):</h5>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;% 
+    String name = request.getParameter("name");
+    Date now = new Date();
+%&gt;</pre>
+                        
+                        <h5 class="font-medium text-gray-800 mt-4 mb-2">Expression (Java expression output):</h5>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;p&gt;Current time: &lt;%= now %&gt;&lt;/p&gt;</pre>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">C. GET vs. POST HTTP Methods</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">Feature</th>
+                                    <th class="py-2 px-4 border-b text-left">GET</th>
+                                    <th class="py-2 px-4 border-b text-left">POST</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Data Visibility</td>
+                                    <td class="py-2 px-4 border-b">In URL (visible)</td>
+                                    <td class="py-2 px-4 border-b">In request body (not visible)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Data Length</td>
+                                    <td class="py-2 px-4 border-b">Limited by URL length</td>
+                                    <td class="py-2 px-4 border-b">No theoretical limit</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Caching</td>
+                                    <td class="py-2 px-4 border-b">Can be cached</td>
+                                    <td class="py-2 px-4 border-b">Not cached</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Bookmarking</td>
+                                    <td class="py-2 px-4 border-b">Can be bookmarked</td>
+                                    <td class="py-2 px-4 border-b">Cannot be bookmarked</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Use Case</td>
+                                    <td class="py-2 px-4 border-b">Retrieving data</td>
+                                    <td class="py-2 px-4 border-b">Submitting data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">D. Request and Response Objects</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h5 class="font-medium text-gray-800 mb-2">Request Object (HttpServletRequest)</h5>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                                <li><code class="bg-gray-200 px-1 rounded">getParameter(name)</code> - Get form parameter</li>
+                                <li><code class="bg-gray-200 px-1 rounded">getAttribute(name)</code> - Get request attribute</li>
+                                <li><code class="bg-gray-200 px-1 rounded">setAttribute(name, value)</code> - Set request attribute</li>
+                                <li><code class="bg-gray-200 px-1 rounded">getRequestDispatcher(path)</code> - Forward to another resource</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h5 class="font-medium text-gray-800 mb-2">Response Object (HttpServletResponse)</h5>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                                <li><code class="bg-gray-200 px-1 rounded">setContentType(type)</code> - Set MIME type</li>
+                                <li><code class="bg-gray-200 px-1 rounded">getWriter()</code> - Get output stream writer</li>
+                                <li><code class="bg-gray-200 px-1 rounded">sendRedirect(url)</code> - Redirect to another URL</li>
+                                <li><code class="bg-gray-200 px-1 rounded">setStatus(code)</code> - Set HTTP status code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">E. HTML Form Elements and Request Parameters</h4>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h5 class="font-medium text-gray-800 mb-2">HTML Form:</h5>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;form action="process.jsp" method="post"&gt;
+    &lt;input type="text" name="username"&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;input type="submit" value="Login"&gt;
+&lt;/form&gt;</pre>
+                        
+                        <h5 class="font-medium text-gray-800 mt-4 mb-2">Reading Form Input in JSP:</h5>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;%
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+    
+    if (username != null && password != null) {
+        // Process the form data
+    }
+%&gt;</pre>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">F. Using Java Objects from Model in JSP</h4>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h5 class="font-medium text-gray-800 mb-2">Declaring and Using Objects:</h5>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+&lt;%@ page import="com.example.User" %&gt;
+&lt;%
+    // Create or retrieve User object
+    User user = (User) request.getAttribute("user");
+    
+    if (user == null) {
+        user = new User();
+        request.setAttribute("user", user);
+    }
+%&gt;
+
+&lt;p&gt;Welcome, &lt;%= user.getName() %&gt;&lt;/p&gt;</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">5. Servlets</h3>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">A. Adding a Servlet to a Dynamic Web Project</h4>
+                    <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+                        <li>Right-click project → New → Servlet</li>
+                        <li>Enter class name and package</li>
+                        <li>Configure URL mapping (e.g., "/login")</li>
+                        <li>Select methods to implement (doGet, doPost)</li>
+                        <li>Finish to create servlet class with annotations</li>
+                    </ol>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg mt-4">
+                        <h5 class="font-medium text-gray-800 mb-2">URL Mapping:</h5>
+                        <p class="text-gray-700 mb-2">Configured in web.xml or via annotations:</p>
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+    // Servlet code
+}</pre>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg mt-4">
+                        <h5 class="font-medium text-gray-800 mb-2">doGet() vs. doPost():</h5>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><span class="font-medium">doGet():</span> Handles HTTP GET requests (retrieving data)</li>
+                            <li><span class="font-medium">doPost():</span> Handles HTTP POST requests (submitting data)</li>
+                            <li>Typically call one from the other to avoid code duplication</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">B. Request and Response Objects in Servlet</h4>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+        throws ServletException, IOException {
+    
+    // Get form parameters
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+    
+    // Process data (validate, authenticate, etc.)
+    
+    // Set attributes for JSP
+    request.setAttribute("message", "Login successful");
+    
+    // Forward to JSP
+    request.getRequestDispatcher("/result.jsp").forward(request, response);
+}</pre>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">C. Using Java Objects from Model in Servlet</h4>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+        throws ServletException, IOException {
+    
+    // Create or retrieve model object
+    UserService userService = new UserService();
+    
+    // Process request using model
+    User user = userService.authenticate(
+        request.getParameter("username"),
+        request.getParameter("password")
+    );
+    
+    // Store model object for view
+    request.setAttribute("user", user);
+    
+    // Forward to view (JSP)
+    request.getRequestDispatcher("/profile.jsp").forward(request, response);
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="mvc">
+            <h2 class="text-2xl font-bold text-red-800 mb-6 flex items-center">
+                <i class="fas fa-project-diagram mr-3"></i> 6. MVC Design Pattern
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">A. Why MVC?</h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-2">Separation of Concerns:</h4>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>Improves maintainability by separating application into distinct components</li>
+                        <li>Easier to manage complexity as application grows</li>
+                        <li>Allows parallel development (different team members can work on different components)</li>
+                        <li>Promotes code reuse (models can be used with different views)</li>
+                        <li>Easier to test components in isolation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">B. Components of MVC</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-red-800 mb-2">Model</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Java classes representing data and business logic</li>
+                            <li>Handles database operations</li>
+                            <li>Contains validation rules</li>
+                            <li>Independent of UI</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-800 mb-2">View</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>JSP files for presentation</li>
+                            <li>Displays data from model</li>
+                            <li>Minimal business logic</li>
+                            <li>Can include JSTL/EL for cleaner code</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 mb-2">Controller</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Servlets that handle user input</li>
+                            <li>Processes requests and responses</li>
+                            <li>Interacts with model</li>
+                            <li>Selects appropriate view</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">Connections Between Components:</h4>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex justify-center mb-4">
+                            <div class="relative" style="width: 400px; height: 200px;">
+                                <!-- MVC Diagram -->
+                                <div class="absolute top-0 left-0 bg-red-100 p-4 rounded-lg" style="width: 120px;">
+                                    <div class="text-center font-bold text-red-800">Model</div>
+                                </div>
+                                <div class="absolute top-0 right-0 bg-blue-100 p-4 rounded-lg" style="width: 120px;">
+                                    <div class="text-center font-bold text-blue-800">View</div>
+                                </div>
+                                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-green-100 p-4 rounded-lg" style="width: 120px;">
+                                    <div class="text-center font-bold text-green-800">Controller</div>
+                                </div>
+                                
+                                <!-- Arrows -->
+                                <div class="absolute top-1/4 left-32 w-16 h-px bg-gray-400"></div>
+                                <div class="absolute top-1/4 left-48 w-16 h-px bg-gray-400"></div>
+                                <div class="absolute top-1/4 left-32 transform rotate-45 origin-left w-16 h-px bg-gray-400"></div>
+                                <div class="absolute top-1/4 left-32 transform -rotate-45 origin-left w-16 h-px bg-gray-400"></div>
+                                
+                                <div class="absolute top-1/4 right-32 w-16 h-px bg-gray-400"></div>
+                                <div class="absolute top-1/4 right-48 w-16 h-px bg-gray-400"></div>
+                                
+                                <div class="absolute bottom-3/4 left-1/2 w-16 h-px bg-gray-400"></div>
+                                <div class="absolute bottom-3/4 left-1/2 transform -translate-x-16 w-16 h-px bg-gray-400"></div>
+                                
+                                <!-- Labels -->
+                                <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs bg-white px-1">Updates</div>
+                                <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 translate-y-2 text-xs bg-white px-1">Notifies</div>
+                                <div class="absolute top-1/2 left-1/4 transform -translate-x-1/2 text-xs bg-white px-1">Uses</div>
+                                <div class="absolute top-1/2 right-1/4 transform translate-x-1/2 text-xs bg-white px-1">Updates</div>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><span class="font-medium">User interacts</span> with view (clicks button, submits form)</li>
+                            <li><span class="font-medium">View sends request</span> to controller</li>
+                            <li><span class="font-medium">Controller processes request</span>, interacts with model</li>
+                            <li><span class="font-medium">Model updates data</span> and notifies controller</li>
+                            <li><span class="font-medium">Controller selects view</span> and passes updated data</li>
+                            <li><span class="font-medium">View renders</span> with updated data from model</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-800 mb-2">Data Passing Between Components:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h5 class="font-medium text-gray-800 mb-2">Controller to View:</h5>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                                <li><code class="bg-gray-200 px-1 rounded">request.setAttribute(name, value)</code></li>
+                                <li><code class="bg-gray-200 px-1 rounded">session.setAttribute(name, value)</code> for session data</li>
+                                <li>Accessed in JSP using EL: <code class="bg-gray-200 px-1 rounded">${attributeName}</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h5 class="font-medium text-gray-800 mb-2">View to Controller:</h5>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                                <li>Form parameters via <code class="bg-gray-200 px-1 rounded">request.getParameter(name)</code></li>
+                                <li>URL parameters in GET requests</li>
+                                <li>Hidden form fields for additional data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">C. Security Aspects</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-yellow-800 mb-2">Client-Side Validation</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>JavaScript validation for better user experience</li>
+                            <li>Quick feedback without server round-trip</li>
+                            <li><span class="font-medium">Limitation:</span> Can be bypassed (always need server validation)</li>
+                            <li>Example: Check for empty fields, valid email format</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-orange-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-orange-800 mb-2">Server-Side Validation</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Essential for security and data integrity</li>
+                            <li>Validate all input from client</li>
+                            <li>Check for required fields, data types, length, format</li>
+                            <li>Example: Validate username/password in servlet</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-red-800 mb-2">Preventing SQL Injection</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Use <code class="bg-gray-200 px-1 rounded">PreparedStatement</code> with parameterized queries</li>
+                            <li>Never concatenate user input into SQL strings</li>
+                            <li>Validate and sanitize all user input</li>
+                            <li>Use principle of least privilege for database users</li>
+                            <li>Example: <code class="bg-gray-200 px-1 rounded">SELECT * FROM users WHERE username = ?</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="database">
+            <h2 class="text-2xl font-bold text-yellow-800 mb-6 flex items-center">
+                <i class="fas fa-database mr-3"></i> 7. Database Connectivity
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">A. State Management Techniques</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">Technique</th>
+                                <th class="py-2 px-4 border-b text-left">Scope</th>
+                                <th class="py-2 px-4 border-b text-left">Use Case</th>
+                                <th class="py-2 px-4 border-b text-left">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Request State</td>
+                                <td class="py-2 px-4 border-b">Single HTTP request</td>
+                                <td class="py-2 px-4 border-b">Passing data between servlet and JSP</td>
+                                <td class="py-2 px-4 border-b"><code class="bg-gray-200 px-1 rounded">request.setAttribute()</code></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Session State</td>
+                                <td class="py-2 px-4 border-b">User session</td>
+                                <td class="py-2 px-4 border-b">Maintaining user login state</td>
+                                <td class="py-2 px-4 border-b"><code class="bg-gray-200 px-1 rounded">session.setAttribute()</code></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Cookies</td>
+                                <td class="py-2 px-4 border-b">Client-side persistence</td>
+                                <td class="py-2 px-4 border-b">Remembering user preferences</td>
+                                <td class="py-2 px-4 border-b"><code class="bg-gray-200 px-1 rounded">response.addCookie()</code></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Database</td>
+                                <td class="py-2 px-4 border-b">Persistent storage</td>
+                                <td class="py-2 px-4 border-b">Long-term data storage</td>
+                                <td class="py-2 px-4 border-b">User profiles, order history</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">B. Setting Up to Work with DB</h3>
+                <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+                    <li><span class="font-medium">Driver - Connector J:</span> MySQL JDBC driver (mysql-connector-java.jar) in project's WEB-INF/lib folder</li>
+                    <li><span class="font-medium">Database:</span> Set up MySQL (or other) database with required schema</li>
+                    <li><span class="font-medium">AWS RDS as Data Server:</span> Create RDS instance with appropriate engine (MySQL, PostgreSQL, etc.)</li>
+                </ol>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">C. Important Parameters</h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li><span class="font-medium">AWS URL:</span> JDBC connection URL format: <code class="bg-gray-200 px-1 rounded">jdbc:mysql://hostname:port/dbname</code></li>
+                        <li><span class="font-medium">DB schema name:</span> Name of the database to connect to</li>
+                        <li><span class="font-medium">Username:</span> Database user with appropriate privileges</li>
+                        <li><span class="font-medium">Password:</span> Password for the database user</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-gray-800 text-gray-100 rounded overflow-x-auto">
+                        <pre class="text-sm">
+// Example connection string for AWS RDS MySQL
+String url = "jdbc:mysql://mydbinstance.123456789012.us-east-1.rds.amazonaws.com:3306/mydatabase";
+String username = "admin";
+String password = "securepassword";</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">D. JDBC Components</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-800 mb-2">Connection Object</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Manages connection to database</li>
+                            <li>Obtained via <code class="bg-gray-200 px-1 rounded">DriverManager.getConnection()</code></li>
+                            <li>Must be closed when done</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 mb-2">PreparedStatement</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Precompiled SQL statement</li>
+                            <li>Prevents SQL injection</li>
+                            <li>Parameters set with <code class="bg-gray-200 px-1 rounded">setXxx()</code> methods</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-purple-800 mb-2">ResultSet / Int</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><code class="bg-gray-200 px-1 rounded">ResultSet</code> for SELECT queries (read operations)</li>
+                            <li><code class="bg-gray-200 px-1 rounded">int</code> for INSERT, UPDATE, DELETE (CUD operations)</li>
+                            <li>Represents number of affected rows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">E. Preventing SQL Injection with PreparedStatement</h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-2">What is SQL Injection?</h4>
+                    <p class="text-gray-700 mb-4">A code injection technique where malicious SQL statements are inserted into an entry field for execution, potentially allowing attackers to view, modify, or delete database data.</p>
+                    
+                    <h4 class="font-medium text-gray-800 mb-2">How PreparedStatement Prevents It:</h4>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>Uses parameterized queries where user input is treated as data, not executable code</li>
+                        <li>Input values are properly escaped automatically</li>
+                        <li>SQL structure is fixed at preparation time</li>
+                    </ul>
+                    
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h5 class="font-medium text-red-800 mb-2">Vulnerable Code (Concatenation):</h5>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+String query = "SELECT * FROM users WHERE username = '" + username + 
+               "' AND password = '" + password + "'";
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery(query);</pre>
+                            <p class="text-red-600 text-sm mt-2">Dangerous! Allows SQL injection.</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h5 class="font-medium text-green-800 mb-2">Secure Code (PreparedStatement):</h5>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+PreparedStatement pstmt = conn.prepareStatement(query);
+pstmt.setString(1, username);
+pstmt.setString(2, password);
+ResultSet rs = pstmt.executeQuery();</pre>
+                            <p class="text-green-600 text-sm mt-2">Secure! Prevents SQL injection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">F. General Steps for Working with DB</h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <ol class="list-decimal pl-6 space-y-4 text-gray-700">
+                        <li>
+                            <span class="font-medium">Create connection object:</span>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm mt-2">
+// Load driver (not needed for newer JDBC versions)
+Class.forName("com.mysql.cj.jdbc.Driver");
+
+// Create connection
+Connection conn = DriverManager.getConnection(url, username, password);</pre>
+                        </li>
+                        
+                        <li>
+                            <span class="font-medium">Create and set up PreparedStatement:</span>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm mt-2">
+String sql = "INSERT INTO products (name, price) VALUES (?, ?)";
+PreparedStatement pstmt = conn.prepareStatement(sql);
+pstmt.setString(1, product.getName());
+pstmt.setDouble(2, product.getPrice());</pre>
+                        </li>
+                        
+                        <li>
+                            <span class="font-medium">Execute query/update:</span>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm mt-2">
+// For SELECT queries
+ResultSet rs = pstmt.executeQuery();
+
+// For INSERT, UPDATE, DELETE
+int rowsAffected = pstmt.executeUpdate();</pre>
+                        </li>
+                        
+                        <li>
+                            <span class="font-medium">Deal with results:</span>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm mt-2">
+// Process ResultSet
+while (rs.next()) {
+    String name = rs.getString("name");
+    double price = rs.getDouble("price");
+    // Create objects or process data
+}
+
+// Check rows affected for updates
+if (rowsAffected > 0) {
+    // Success
+}</pre>
+                        </li>
+                        
+                        <li>
+                            <span class="font-medium">Close connection:</span>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm mt-2">
+// Close resources in reverse order
+rs.close();
+pstmt.close();
+conn.close();</pre>
+                            <p class="text-gray-700 mt-2">Note: Use try-with-resources for automatic closure:</p>
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded overflow-x-auto text-sm mt-2">
+try (Connection conn = DriverManager.getConnection(url, username, password);
+     PreparedStatement pstmt = conn.prepareStatement(sql)) {
+    // Work with database
+} catch (SQLException e) {
+    // Handle exceptions
+}</pre>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8" id="deployment">
+            <h2 class="text-2xl font-bold text-pink-800 mb-6 flex items-center">
+                <i class="fas fa-server mr-3"></i> 8. Deploying Full-Stack, Java MVC Applications to the Cloud
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">A. Platform as a Service vs Infrastructure as a Service</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-blue-800 text-lg mb-3">PaaS (Platform as a Service)</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                            <li><span class="font-medium">Common Scenarios:</span>
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Web application hosting</li>
+                                    <li>API backend services</li>
+                                    <li>Development and testing environments</li>
+                                </ul>
+                            </li>
+                            <li><span class="font-medium">Advantages:</span>
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Simplified deployment process</li>
+                                    <li>Automatic scaling</li>
+                                    <li>Built-in load balancing</li>
+                                    <li>Managed infrastructure (no server maintenance)</li>
+                                    <li>Faster time to market</li>
+                                </ul>
+                            </li>
+                            <li><span class="font-medium">Example:</span> AWS Elastic Beanstalk, Heroku, Google App Engine</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-green-800 text-lg mb-3">IaaS (Infrastructure as a Service)</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                            <li><span class="font-medium">Common Scenarios:</span>
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Custom infrastructure needs</li>
+                                    <li>Legacy application hosting</li>
+                                    <li>Complete control over environment</li>
+                                </ul>
+                            </li>
+                            <li><span class="font-medium">Advantages:</span>
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Full control over virtual machines</li>
+                                    <li>Flexibility in configuration</li>
+                                    <li>Ability to install custom software</li>
+                                    <li>More granular security controls</li>
+                                </ul>
+                            </li>
+                            <li><span class="font-medium">Example:</span> AWS EC2, Google Compute Engine, Microsoft Azure VMs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">B. Elastic Beanstalk</h3>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-gray-800 text-lg mb-3">What is Elastic Beanstalk?</h4>
+                    <p class="text-gray-700 mb-4">AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services. You simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.</p>
+                    
+                    <h4 class="font-bold text-gray-800 text-lg mb-3">Elastic Beanstalk Terms</h4>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li><span class="font-medium">Application:</span> Logical collection of Elastic Beanstalk components (environments, versions, configurations)</li>
+                        <li><span class="font-medium">Application Version:</span> Specific labeled iteration of deployable code</li>
+                        <li><span class="font-medium">Environment:</span> Version deployed to AWS resources (EC2 instances, etc.)</li>
+                        <li><span class="font-medium">Environment Tier:</span> Web server (handles HTTP requests) or Worker (handles background tasks)</li>
+                    </ul>
+                    
+                    <h4 class="font-bold text-gray-800 text-lg mt-6 mb-3">Difference Between Elastic Beanstalk and Manual EC2</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">Feature</th>
+                                    <th class="py-2 px-4 border-b text-left">Elastic Beanstalk</th>
+                                    <th class="py-2 px-4 border-b text-left">Manual EC2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Setup Complexity</td>
+                                    <td class="py-2 px-4 border-b">Simple - just upload code</td>
+                                    <td class="py-2 px-4 border-b">Complex - configure everything</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Scaling</td>
+                                    <td class="py-2 px-4 border-b">Automatic</td>
+                                    <td class="py-2 px-4 border-b">Manual configuration</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Load Balancing</td>
+                                    <td class="py-2 px-4 border-b">Built-in</td>
+                                    <td class="py-2 px-4 border-b">Manual setup</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Monitoring</td>
+                                    <td class="py-2 px-4 border-b">Basic monitoring included</td>
+                                    <td class="py-2 px-4 border-b">Manual setup</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b">Control</td>
+                                    <td class="py-2 px-4 border-b">Limited - AWS manages infrastructure</td>
+                                    <td class="py-2 px-4 border-b">Full control</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">C. Deploying to Elastic Beanstalk</h3>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-gray-800 text-lg mb-3">What is a Java WAR file?</h4>
+                    <p class="text-gray-700 mb-4">A Web Application Resource (WAR) file is a JAR file used to distribute a collection of JavaServer Pages, servlets, Java classes, XML files, static web pages, and other resources that together constitute a web application.</p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+                        <li>Standard format for packaging Java web applications</li>
+                        <li>Contains all components needed for deployment</li>
+                        <li>Created by Eclipse when exporting a Dynamic Web Project</li>
+                        <li>Deployed to application servers like Tomcat</li>
+                    </ul>
+                    
+                    <h4 class="font-bold text-gray-800 text-lg mb-3">Deployment Steps</h4>
+                    <ol class="list-decimal pl-6 space-y-4 text-gray-700">
+                        <li>
+                            <span class="font-medium">Create WAR file:</span>
+                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                <li>In Eclipse: Right-click project → Export → WAR file</li>
+                                <li>Or use Maven/Gradle build tools</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <span class="font-medium">AWS Console:</span>
+                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                <li>Navigate to Elastic Beanstalk service</li>
+                                <li>Click "Create Application"</li>
+                           
+</html>
